@@ -38,6 +38,19 @@ a{
     padding: 1em;
 }
 
+.alert{
+        position: absolute;
+        top: 2em; /* Adjust top position as needed */
+        left: 50%; /* Adjust left position as needed */
+        background-color: #4CAF50; /* Green */
+        color: white;
+        padding: 15px;
+        border-radius: 5px;
+        /* display: none;  */
+        opacity: 0; /* Initial opacity */
+        transition: opacity 0.5s ease; /* Opacity transition */
+}
+
 .textInput{
     -webkit-appearance: none;
     appearance: none;

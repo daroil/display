@@ -113,6 +113,28 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
+  function displaySuccessMessage(message, duration) {
+    // Create alert div
+    var alertDiv = document.createElement('div');
+    alertDiv.id = 'alert';
+    alertDiv.textContent = message;
+    alertDiv.classList.add('alert');
+  
+    // Append alert div to document body
+    document.body.appendChild(alertDiv);
+  
+    // Show alert div
+    alertDiv.style.opacity = '1';
+  
+    // Set timeout to remove alert after duration
+    setTimeout(function() {
+        alertDiv.style.opacity = '0'; // Fade out alert div
+        setTimeout(function() {
+          document.body.removeChild(alertDiv); // Remove alert div from document
+        }, 500); // Wait for animation to complete before removing
+      }, duration);
+  }
+
 
   function setButtons(){
     var buttonsData = [];
@@ -130,4 +152,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
       localStorage.setItem('buttons', JSON.stringify(buttonsData));
+        displaySuccessMessage('Success', 500);
   }
