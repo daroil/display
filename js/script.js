@@ -6,6 +6,35 @@ document.addEventListener('DOMContentLoaded', function() {
     fetchButtons();
   });
 
+function createEvent(text)
+{
+
+  return function(){
+    displayText(text);
+  };
+}
+
+function displayText(text){
+  // console.log('function called');
+  console.log(text,'text');
+  var displayElement = document.getElementById('displayText');
+  if (displayElement) {
+    // Change the text content of the element to the input text
+    displayElement.classList.remove('show');
+    // displayElement.offsetWidth;
+    // displayElement.textContent = text;
+    setTimeout(function() {
+      displayElement.textContent = text;
+    }, 200);  
+    
+    setTimeout(function() {
+      displayElement.classList.add('show');
+    }, 200);  
+  } else {
+    console.error('Element with ID "displayText" not found.');
+  }
+}
+
   function fetchButtons(){
         const storedButtons = JSON.parse(localStorage.getItem('buttons'));
       
@@ -16,9 +45,11 @@ document.addEventListener('DOMContentLoaded', function() {
         //   const span = document.createElement('span');
           buttonEl.classList.add('button-64');
           buttonEl.textContent = `${button.name}`;
-        //   buttonEl.appendChild(span);
+          //   buttonEl.appendChild(span);
           buttonList.appendChild(buttonEl);
-          console.log("appended");
+          buttonEl.addEventListener('click', createEvent(button.text));
+          // console.log(`${button.text}`);
+          // console.log("appended");
         });
   }
 

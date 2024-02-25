@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Display App</title>
-    <link rel="stylesheet" href="css/styles.css?v=1">
+    <link rel="stylesheet" href="css/styles.css?v=3">
     <link rel="icon" href="img/logo.png" type="image/png">
-    <script src="js/script.js"></script>
+    <script src="js/script.js?v=1"></script>
 </head>
 <body>
     <div class="background"></div>
+    
     <main>
         <div class="row">
+            <div class="buttonCol">
+                <a class="backButton" href="index.html">
+                    <img src="img/arrow-left.png">
+                </a>
+            </div>
             <div class="column">
-                <div class="label">Your text here</div>
                 <div class="card">
-                    <a class="button" id="setupButton" href="index.html">Home</a>
+                    <div class="label" id="displayText">Your text here</div>
                 </div>
             </div>
             <div class="cluster" id="cluster">     
