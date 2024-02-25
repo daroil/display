@@ -251,6 +251,13 @@ h1 {
     color: black;
 }
 
+@media (max-width: 1200px) {
+    .cluster{
+        /* flex-direction: row; */
+        width: 80%;
+    }
+}
+
 @media (max-width: 768px) {
     .backButton{
         display: flex;
