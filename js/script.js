@@ -38,19 +38,28 @@ function displayText(text){
   function fetchButtons(){
         const storedButtons = JSON.parse(localStorage.getItem('buttons'));
       
+        if (storedButtons === null) {
+          // Display a message suggesting to set up buttons
+          console.log('executed');
+          var setupMessage = document.getElementById('displayText');
+          setupMessage.textContent = "No buttons set up. Please go to the setup page to add buttons.";
+          setupMessage.classList.add('show');
+        } else {
+
+          const buttonList = document.getElementById('cluster');
+          storedButtons.forEach(button => {
+            const buttonEl = document.createElement('button');
+          //   const span = document.createElement('span');
+            buttonEl.classList.add('button-64');
+            buttonEl.textContent = `${button.name}`;
+            //   buttonEl.appendChild(span);
+            buttonList.appendChild(buttonEl);
+            buttonEl.addEventListener('click', createEvent(button.text));
+          });
+        }
         // Display button information
-        const buttonList = document.getElementById('cluster');
-        storedButtons.forEach(button => {
-          const buttonEl = document.createElement('button');
-        //   const span = document.createElement('span');
-          buttonEl.classList.add('button-64');
-          buttonEl.textContent = `${button.name}`;
-          //   buttonEl.appendChild(span);
-          buttonList.appendChild(buttonEl);
-          buttonEl.addEventListener('click', createEvent(button.text));
           // console.log(`${button.text}`);
           // console.log("appended");
-        });
   }
 
   function setButtons(){
