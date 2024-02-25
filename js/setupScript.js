@@ -26,12 +26,14 @@ document.addEventListener('DOMContentLoaded', function() {
     var div = document.createElement('div');
     
     select.id = 'numberSelector';
+    select.className = 'dropdown';
     
     // Add options to the select element
     for (var i = 0; i <= 20; i++) {
       var option = document.createElement('option');
       option.value = i;
       option.textContent = i === 0 ? 'Select a number' : i;
+      option.className = 'option';
       select.appendChild(option);
     }
     

@@ -41,7 +41,7 @@ a{
 .alert{
         position: absolute;
         top: 2em; /* Adjust top position as needed */
-        left: 50%; /* Adjust left position as needed */
+        left: 45%; /* Adjust left position as needed */
         background-color: #4CAF50; /* Green */
         color: white;
         padding: 15px;
@@ -64,6 +64,28 @@ a{
 }
 
 
+#dropdownContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.dropdown{
+    outline: none;
+    background: 0;
+    border: 2px solid white;
+    padding: 0.5em;
+    border-radius: 5px;
+    color: white;
+    transition: all .15s ease;
+}
+
+.option{
+    color: black;
+}
+
 .textInput:hover{
     background-color:lightgrey 40%;
     border-color: black;
@@ -78,6 +100,7 @@ a{
 .inputElement{
     display: flex;
     flex-direction: column;
+    row-gap: 0.3em;
 }
 
 .button-64 {
@@ -93,6 +116,11 @@ a{
     justify-content: center;
     align-content: center;
     cursor: pointer;
+}
+
+#SaveButton.button-64{
+    width: 1em;
+    padding: 1.2em;
 }
 
 .button-64:hover{
@@ -168,12 +196,6 @@ h1 {
     padding-right: 1em;
 }
 
-#dropdownContainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-}
 
 .card {
     background-color: #6235C9;
@@ -215,6 +237,7 @@ h1 {
     align-items: center;
     justify-content: center;
     row-gap: 1em;
+    margin: 0.5em;
 }
 
 
@@ -256,5 +279,8 @@ h1 {
         padding: 2em;
         height: auto;
         width: 40%;
+    }
+    .alert{
+        left: 40%;
     }
 }
