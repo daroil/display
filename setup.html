@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display App</title>
+    <link rel="stylesheet" href="css/styles.css?v=1">
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // This function will be executed when the DOM is fully loaded
+
+    // Call your function or execute your code here
+    setButtons();
+  });
+  function setButtons(){
+    const buttons = [
+        { name: '1', text: 'sset up 1' },
+        { name: '2', text: 'Informatiset up 2' },
+        { name: '3', text: 'sset up 1' },
+        { name: '4', text: 'Informatiset up 2' },
+        { name: '5', text: 'sset up 1' },
+        { name: '6', text: 'Informatiset up 2' },
+        { name: '7', text: 'sset up 1' },
+        { name: '8', text: 'Informatiset up 2' },
+        { name: '9', text: 'sset up 1' },
+        { name: '10', text: 'Informatiset up 2' },
+        { name: '11', text: 'sset up 1' },
+        { name: '12', text: 'Informatiset up 2' },
+        { name: '13', text: 'sset up 1' },
+        { name: '14', text: 'Informatiset up 2' },
+        { name: '15', text: 'sset up 1' },
+        { name: '16', text: 'sset up 1' },
+        { name: '17', text: 'sset up 1' },
+        { name: '18', text: 'sset up 1' },
+        { name: '19', text: 'sset up 1' },
+        { name: '20', text: 'Informatiset up 2' }
+      ];
+    
+      localStorage.setItem('buttons', JSON.stringify(buttons));
+  }
+    </script>
+</head>
+<body>
+    <div class="background"></div>
+    <main>
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <a class="button" id="startButton" href="start.html">Start</a>
+                    <div class="button" id="setupButton" href="index.html">Home</div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
